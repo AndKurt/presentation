@@ -1,40 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<title>reveal.js</title>
+    <title>TypeScript presentation</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>TypeScript</h3>
+          <div class="footer">
+            <p>
+              <small
+                >Created by <a href="https://rs.school/">The Rolling Scopes School</a> student
+                <span class="student-name">Andrei Kurtsiankou</span> <br />
+                <a href="https://github.com/AndKurt/">GitHub - AndKurt</a> <br />
+                <br />
+                2022</small
+              >
+            </p>
+          </div>
+        </section>
+        <section>
+          <img src="img/about-typescript.jpg" alt="about-typescript" />
+        </section>
+        <section>
+          <div>
+            1. What is TypeScript? <br />
+            2. Why do we need to use TypeScript? <br />
+            3. Top features of TypeScript <br />
+            4. Conclusions <br />
+          </div>
+        </section>
+        <section>
+          <h6>What is TypeScript?</h6>
+          <section>
+            <h3 style="margin: 0.3rem auto 0.3rem auto">History</h3>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Anders_Hejlsberg.jpg"
+              alt="Anders Hejlsberg photo"
+              style="height: 350px; margin: 0 auto 0.2rem auto; background: transparent"
+              class="demo-logo"
+            />
+            <div>
+              TypeScript was first made public in October 2012. It was a result of two years of developed at Microsoft, with Anders
+              Hejlsberg.
+            </div>
+          </section>
+          <section>TypeScript is an object oriented and strongly typed programming language which is a superset of JavaScript.</section>
+          <section><img src="img/compiler.png" alt="compiler" /></section>
+          <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+            <div class="r-hstack justify-center animation">
+              <div data-id="box1" data-auto-animate-delay="0" style="background: #2a70da; width: 250px; height: 150px; margin: 10px">
+                TypeScript
+              </div>
+              <div data-id="box3" data-auto-animate-delay="0.2" style="background: #eebb12; width: 250px; height: 150px; margin: 10px">
+                JavaScript
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+            <div class="r-stack animation">
+              <div data-id="box1" style="background: #2a70da; width: 300px; height: 300px; border-radius: 200px; align-items: flex-start">
+                <p style="line-height: 80px">TypeScript</p>
+              </div>
+              <div data-id="box3" style="background: #eebb12; width: 200px; height: 200px; border-radius: 200px; margin-top: 90px">
+                JavaScript
+              </div>
+            </div>
+            <h6 style="margin-top: 20px">In other words, TypeScript is JavaScript plus some additional features.</h6>
+          </section>
+        </section>
+        <section>
+          <h6>Why do we need to use TypeScript?</h6>
+          <section>
+            <img class="fragment" src="img/data-types.jpg" alt="data-types" style="height: 400px" />
+            <p>
+              Type checking: This is why typescript really exists. It adds type checking over javascript. It stops you to write stupid code
+            </p>
+          </section>
+          <section>
+            <p>Gives error at compile time instead of runtime.</p>
+            <img src="img/error.png" alt="error-highlight" />
+          </section>
+          <section>
+            <p>
+              OOP principles: Typescript allow you to use object-oriented programming concepts very easily. Like class, interface,
+              inheritance, and so on.
+            </p>
+            <p class="fragment">
+              Predictable Code: If you have type checking, then you know where to put what type of data. And which code will return which
+              type of output. You can predict the code and it is very important
+            </p>
+          </section>
+          <section>
+            <p>Using absolute imports instead relative import</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              // Relative imports
+              import User from '../../componets/user'
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+              // Absolute imports
+              import User from 'componets/user'
+						</code></pre>
+          </section>
+          <section>
+            <img class="fragment" src="img/understand.jpg" alt="easy to understand" style="height: 400px" />
+            <p>
+              Easy to understand: Typescript makes your code a lot easier to read and understand. Because you know what variable is which
+              type and where to use what
+            </p>
+          </section>
+          <section>
+            <p>TypeScript is fast, simple, easy to learn and runs on any browser or JavaScript engine.</p>
+            <p class="fragment">It is similar to JavaScript and uses the same syntax and semantics.</p>
+          </section>
+        </section>
+        <section>
+          <h6>Top features of TypeScript</h6>
+          <section>
+            <p>Data Types</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              // boolean
+              let isCompleted: boolean = true;
+              // number
+              let counter: number = 5;
+              // string
+              let name: string = 'Andrey';
+              // array
+              let array: number[] = [5, 10, 15];
+              // object
+              let object: object = {
+                name: 'Andrey'
+              };
+              // tuple type 
+              let tuple:[number, string] = [20, 'test']
+						</code></pre>
+          </section>
+          <section>
+            <p>Data Types</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              // void
+              const greeting = (): void => {
+                console.log('Hello, friend!')
+              }; 
+              // any
+              let x: any
+              x = 42;
+              x = true;
+						</code></pre>
+          </section>
+          <section>
+            <p>Data Types</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              // undefined and null
+              let undefinedName: undefined = undefined;
+              let nullName: null = null;
+              // Enum
+              enum Weather {
+                Cold = 'cold',
+                Warm = 'warm'
+              }
+              Weather.Cold;   // 'cold'
+              Weather.Cold;   // 'warm'
+              // multiple type 
+              let someValue: string | number;
+						</code></pre>
+          </section>
+          <!--<section>
+            <p>Functions</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              // function with two required arguments
+              const createSring = (name: string, age: number): string => 
+              `${name}${age}`
+              
+              // function with optional argument 'age'
+              const createSring = (name: string, age?: number): string => 
+              `${name}${age}`
+						</code></pre>
+          </section>-->
+          <section>
+            <p>Interface</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              interface ITax {
+                taxpayerId: string;
+                calculateTax(): number;
+                }
+            class IncomeTax implements ITax {
+                taxpayerId: string;
+                calculateTax(): number {
+                return 10000;
+                }
+            }
+            class ServiceTax implements ITax {
+                taxpayerId: string;
+                calculateTax(): number {
+                return 2000;
+                }
+            }
+						</code></pre>
+          </section>
+          <section>
+            <p>Access Modifiers and Properties</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              class Employee {
+                private empCode: number;
+                public empName: string;
+            }
+            
+            let emp = new Employee();
+            emp.empCode = 123; // This will throw an error.
+            emp.empName = "Swati"; // This will work
+						</code></pre>
+          </section>
+          <section>
+            <p>Generic type</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              function getter < T >(items: T): T {
+                return data
+              };
+              let x = getter < number > (5)
+              let x = getter < string > ('some string')
+						</code></pre>
+          </section>
+          <section>
+            <p>ReadOnly</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              class Employee {
+                readonly empCode: number;
+                empName: string;
+                
+                constructor(code: number, name: string)     {
+                    this.empCode = code;
+                    this.empName = name;
+                }
+            }
+            let emp = new Employee(10, "John");
+            emp.empCode = 20; // This will throw an error.
+            emp.empName = 'Bill';
+						</code></pre>
+          </section>
+        </section>
+        <section>Conclusions</section>
+        <section data-background="img/the-end-2.gif"></section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
